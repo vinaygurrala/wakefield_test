@@ -1,0 +1,19 @@
+<template>
+    <!--<h1>{B2B_ProductDetails.Name}</h1>-->
+    <lightning-card title="Product Recommendation">
+        <div class=" slds-grid slds-wrap slds-grid_pull-padded">
+            <template for:each={recommendedProducts} for:item="Product2">
+                <div key={Product2.Name} class="slds-col slds-p-around_medium" style="width: 50%; max-width: 30%; @media (min-width: 768px) { max -width: 33.33%; }">
+                    <lightning-layout>
+                    <lightning-layout-item size="12" padding="around-small">
+                        <div class="slds-box">
+                        <img src={Product2.ImageUrl} alt="Product Image" width="200" height="200">
+                        <div class="slds-text-body_small">Product Price: {Product2.Price}</div>
+                    </div>
+                    </lightning-layout-item>
+                </lightning-layout>
+                </div>
+            </template>        
+        </div>
+    </lightning-card>
+</template>

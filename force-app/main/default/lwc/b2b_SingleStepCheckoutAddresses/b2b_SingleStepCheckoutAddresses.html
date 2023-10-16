@@ -1,0 +1,109 @@
+<template>
+<div class="slds-p-around_large">
+<div>
+  <div class="slds-grid slds-gutters">
+   <div class="slds-col slds-size_1-of-2">
+     <p class="selectAddressTitle">Select Billing Account</p>
+   </div>
+    <div class="slds-col slds-size_1-of-2 text_align_end">
+       <button class="slds-button" onclick={handleClickEditBillingAccount}>Change</button>
+   </div>
+  </div>
+<hr/>
+  <!-- on click of edit butttonn -->
+<template if:true={displayChangeBillingAccount}>
+  <lightning-combobox
+            name="Display address"
+            label="Please change the address"
+            value={value}
+            placeholder="Select Billing address" 
+            class="combobox_style"
+            options={options}
+            onchange={handleChange} ></lightning-combobox>
+</template>
+<br/>
+<div class="billingAddressStyle">
+  <div class="slds-p-around_large bestBuy_text">
+    <span>Bestbuy Distributors LTD</span>
+  </div>
+</div>
+<hr/>
+</div>
+</br>
+<!-- for delivery address -->
+<div>
+    <div class="slds-grid slds-gutters">
+   <div class="slds-col slds-size_1-of-2">
+    <p class="selectAddressTitle">Select Delivery Address</p>
+
+   </div>
+    <div class="slds-col slds-size_1-of-2 text_align_end">
+       <button class="slds-button" onclick={handleClickEditDeliveryAccount}>Change</button>
+   </div>
+  </div>
+
+<hr/>
+
+  <!-- on click of edit butttonn -->
+  <template if:true={displayChangeDeliveryAccount}>
+    <lightning-combobox
+            name="Display address"
+            label="Please change the address"
+            value={deliveryAccount}
+            placeholder="Select Delivery Address" 
+            class="combobox_style"
+            options={deliveryAccountOptions}
+            onchange={handleChangeDeliveryAccount} ></lightning-combobox>
+</template>
+<br/>
+  <div class="billingAddressStyle slds-p-around_large">
+    <p>Abby Tune-up centre ltd</p>
+    <p>Unit 24 3275 McCallum Rd Abbotsford, British Columbia V2S 7W8 Canada</p>
+  </div>
+</div>
+</br>
+<!-- the po numberr -->
+<div>
+     <p> <lightning-icon icon-name="utility:add" title="Add" size="xx-small" onclick={handleClickAddOrderNumber}></lightning-icon> <span> Add Purchase Order Number (optional)</span></p>
+</div>
+
+<div>
+  <template if:true={displayInputField}>
+        <div class="slds-p-around_medium lgc-bg">
+          <div class="slds-grid slds-gutters">
+              <div class="slds-col slds-size_1-of-2">
+                 <lightning-input type="text" placeholder="Enter some text"  pattern="[a-zA-z0-9]+"
+                        message-when-pattern-mismatch="Special Characters not allowed"></lightning-input>
+              </div>
+              <div class="slds-col slds-size_1-of-2 slds-p-top_large">
+                    <button class="slds-button" onclick={handleClickSubmitButton}>Submit</button>
+              </div>
+          </div>
+        </div>
+  </template>
+</div>
+
+<hr/>
+<!-- Order detailsss -->
+<div>
+<p class="selectAddressTitle">Order Details</p>
+</div>
+<hr/>
+<div class="slds-grid slds-gutters">
+   <div class="slds-col slds-size_1-of-4">
+      <span class="slds-p-around_x-small">
+                <img src={productImages} alt="" class="">
+        </span>
+  </div>
+  <div class="slds-col slds-size_2-of-4">
+    <p class="gradetext_style">10W30</p>
+    <p class="imageDescriptionText">Castrol Edge Maximum Performance</p>
+    <span class="imageQty_style">Size: 3x5L | Pack   </span>
+    <span class="imageQty_style">Qty: 3</span>
+  </div>
+  <div class="slds-col slds-size_1-of-4">
+    <span>$XX.XX</span>
+  </div>
+</div>
+</div>
+</template>

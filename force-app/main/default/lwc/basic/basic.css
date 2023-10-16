@@ -1,0 +1,29 @@
+/* Styles for the custom carousel container */
+.custom-carousel {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Styles for the carousel slides */
+  .carousel-wrapper {
+    display: flex;
+    transition: transform 0.3s ease;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .carousel-slides {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  
+  .carousel-slide {
+    flex: 0 0 100%; /* Set the width of each slide */
+    height: 300px; /* Set the height of the carousel */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }

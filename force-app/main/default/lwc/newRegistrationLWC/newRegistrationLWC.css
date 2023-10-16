@@ -1,0 +1,24 @@
+.request_credential_input_row{
+    display: flex;
+    width: 100%;
+}
+.request_credential_input_row{
+    display: flex;
+    flex-direction: column;
+}
+.request_credential_form_input{
+    margin-bottom: 14px;
+}
+.request_credential_form_input  input{
+    height: 40px !important;
+    border: 0.5px solid #808080 !important;
+    border-radius: 2px !important;
+    background-color: #FFFFFF !important;
+}
+
+.request_credential_form_input div[lightning-input_input]{
+    height: 40px !important;
+    border: 0.5px solid #808080 !important;
+    border-radius: 2px !important;
+    background-color: #FFFFFF !important;
+}

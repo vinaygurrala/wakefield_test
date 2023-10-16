@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Product Recommendation" icon-name="standard:product">
+            <lightning-layout multiple-rows="true" vertical-align="end">
+            <lightning-layout-item size="3" small-device-size="3" medium-device-size="3" large-device-size="3" padding="around-small">
+                    <div class="slds-form-element">
+                            <div class="slds-form-element__control">
+                                    <lightning-input type="text" 
+                                                     value={strSearchProdName}
+                                                     label="Enter Product SKU" 
+                                                     onchange={handleProductName} placeholder="Search Product">                                         </lightning-input>
+                            </div>
+                        </div> 
+            </lightning-layout-item>
+            </lightning-layout><br/>
+
+        <div if:true={searchData}>
+            <lightning-datatable data={searchData} 
+                                 columns={columns} 
+                                 key-field="id"></lightning-datatable>
+        </div>
+    </lightning-card>
+    </template>

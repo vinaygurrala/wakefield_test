@@ -1,0 +1,226 @@
+.THIS {
+    font-family: 'EMprint_web';
+        font-size: 20px;
+    }
+
+    @font-face
+    {
+        font-family:'EMprint_web';
+        src: url('@salesforce/resource/EMprint_web');
+    }
+
+.textbox{
+    fill: rgba(234,234,234,1);
+    width: 280px;
+    margin-bottom: 15px;
+    border-bottom: #3c3091;
+    border-bottom-width: 2px;
+    font-weight: bold;
+    color: rgba(60,48,145,1);;
+}
+
+::placeholder{
+    color: #3c3091;
+}
+
+.logo{
+    margin-bottom: 38px;
+    margin-top: 75px;
+}
+
+.text-atua{
+    font-size: 14px;
+    color: rgba(34,63,153,1);
+    margin-top: 43px;
+
+}
+
+.line{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+line:after,
+line:before{
+    flex-grow: 1;
+    height: 1px;
+    content: '\a0';
+    background-color: #ddd;
+    position: relative;
+    top: 0.5em;
+}
+
+line:before {
+    margin-right:10px;
+}
+
+line:after {
+    margin-left:10px;
+}
+
+.button{
+    background-color:  #3c3091;
+    color:  #ffffff;
+    width: 257px;
+    height: 45px;
+    display: d;
+    padding: 0.5rem;
+    font-size: 16px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    border-radius: 7px;
+    text-align: center !important;
+}
+
+.login-text{
+    margin-top: 20px;
+    margin-bottom: 43px;
+    width: 77px;
+    text-align: center;
+    font-style: normal;
+    font-size: 15px;
+    color: rgba(34,63,153,1);
+}
+
+.pw-text{
+  margin-top: 20px;
+  margin-bottom: 43px;
+  width:  257px;
+  text-align: center;
+  font-style: normal;
+  font-size: 15px;
+  color: rgba(34,63,153,1);
+}
+
+.line {
+    border-bottom: 2px solid rgba(34,63,153,1);
+    margin-top: 43px;
+}
+
+.button-new-account{
+    fill: transparent;
+    border-color:  rgba(60,48,145,1);
+    border-width: 3px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+    margin-top: 34px;
+    width: 257px;
+    height: 45px;
+    display: block;
+    font-size: 16px;
+    border-radius: 7px;
+}
+
+.atuaId:after,
+.atuaId:before{
+    content:"\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0";
+    text-decoration:line-through;
+}
+
+.inputBox{
+    color: #3c3091;
+    font-size: 16px;
+    background-color: #eaeaea;
+    border-bottom-color: #3c3091;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    height: 49px;
+    width: 281px;
+}
+
+.input-box {
+    display: flex;
+    align-items: center;
+    background-color: #eaeaea;
+    border-bottom-color: #3c3091;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    width: 281px;
+    height: 49px;
+    font-size: 16px;
+    padding-left: 0.5rem;
+  }
+
+  .input-box .prefix {
+    font-weight: bold;
+    font-size: 16px;
+    color: #3c3091;
+  }
+
+  .input-box input {
+    flex-grow: 1;
+    font-size: 16px;
+    background: #eaeaea;
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+  }
+
+  .input-box:focus-within {
+    background-color: #eaeaea;
+    border-bottom-color: #3c3091;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+  }
+
+.input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+.tooltip {
+    position: relative;
+    border-bottom: 1px dotted black;
+  }
+
+  .tooltip .tooltiptext {
+    font-size: 10px;
+    color: red;
+  }
+
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -4px;
+    margin-left: -6px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+    transform: rotate(90deg);
+  }
+
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .tooltipError {
+    font-size: 10px;
+    color: red;
+  }
+
+  .tooltip .tooltipError::after {
+
+    border-color: white transparent transparent transparent !important;
+  }
+
+  .tooltipShow {
+
+    display: block;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .tooltipHide {
+
+    display: none;
+  }

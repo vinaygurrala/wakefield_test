@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Available Offers">
+        <div class="slds-m-around_medium">
+            <template if:true={offers.promotion}>
+                <template for:each={offers.promotion} for:item="offer">
+                    <div key={offer.promotiontName} class="slds-p-bottom_medium">
+                        <div class="slds-box">
+                        <p>{offer.promotiontName}</p>
+                    </div>
+                    </div>
+                </template>
+            </template>
+            
+            <template if:false={offers.promotion}>
+                <p>No offers available.</p>
+            </template>
+        </div>
+    </lightning-card>
+    
+</template>

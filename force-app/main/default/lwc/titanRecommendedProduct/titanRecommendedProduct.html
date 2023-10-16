@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Product Recommendation">
+        <div class=" slds-grid slds-wrap slds-grid_pull-padded">
+            <template for:each={recommendedProducts.recommendation} for:item="Product2">
+                <div key={Product2.productName} class="slds-col slds-p-around_medium" style="width: 50%; max-width: 30%; @media (min-width: 768px) { max -width: 33.33%; }">
+                <lightning-layout>
+                    <lightning-layout-item size="12" padding="around-small">
+                        <div class="slds-box" style="height: 170px;">
+                        <img src={Product2.productURL} alt="Product Image" width="250" height="250">
+                        <div class="slds-text-body_small"><b>{Product2.productName}</b></div>
+                      <div> <lightning-formatted-number value={Product2.price} format-style="currency" currency="INR">Price: </lightning-formatted-number>(<span style="color: red;">5% Discount</span>)</div> 
+                    </div>
+                    
+                    </lightning-layout-item>
+                </lightning-layout>
+                </div>
+            </template>        
+        </div>
+    </lightning-card>
+</template>

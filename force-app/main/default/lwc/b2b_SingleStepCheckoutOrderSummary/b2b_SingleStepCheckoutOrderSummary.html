@@ -1,0 +1,65 @@
+<template>
+<div class="slds-p-around_large">
+<p class="orderSummary_header">Order Summary</p>
+
+
+<div class="slds-p-top_large slds-p-bottom_large">
+<div class="slds-grid slds-gutters orderSummary_details">
+  <div class="slds-col">
+    <p>Subtotal</p>
+    <p>Discount Code</p>
+    <p>Estimated Delivery</p>
+    <p>Environment Handling Fees</p>
+    <p>GST</p>
+    <p>PST</p>
+  </div>
+  <div class="slds-col">
+    <p>$XX.XX</p>
+    <p>-$XX.XX</p>
+    <p>Free</p>
+    <p>$XX.XX</p>
+    <p>$XX.XX</p>
+    <p>$XX.XX</p>
+  </div>
+</div>
+</div>
+<!-- promoton input field button -->
+<div class="slds-p-top_large slds-p-bottom_large">
+   <input type="text" placeholder="Promotion Code" class="slds-input promtionInputfield" />
+   <button class="slds-button slds-button_brand promotionApply_button">Applied</button>
+</div>
+
+<!-- Total-->
+<div class="slds-p-top_large slds-p-bottom_large">
+  <div class="slds-grid slds-gutters orderSummary_details">
+      <div class="slds-col">
+        <p class="orderSummary_header">Total</p>
+      </div>
+      <div class="slds-col slds-align_absolute-center">
+        <p>$XX.XX</p>
+      </div>
+  </div>
+  <div>
+  <p>You are saving $50.00 on this order</p>
+</div>
+</div>
+
+<!-- confirmation button -->
+<div class="slds-p-top_large slds-p-bottom_large">
+<div class="slds-form-element">
+  <div class="slds-form-element__control">
+    <div class="slds-checkbox">
+      <input type="checkbox" name="options" id="checkbox-unique-id-81" value="checkbox-unique-id-81" checked="" />
+      <label class="slds-checkbox__label" for="checkbox-unique-id-81">
+        <span class="slds-checkbox_faux"></span>
+        <span class="slds-form-element__label">By placing this order I have confirmed my account information, billing account, and shipping address are correct.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<div class="slds-p-top_large slds-align_absolute-center">
+ <button class="slds-button slds-button_brand checkoutButton">Checkout & Pay</button>
+</div>
+</div>
+</div>
+</template>

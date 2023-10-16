@@ -1,0 +1,40 @@
+trigger:
+  batch: "true"
+  branches:
+    include:
+    - main
+  paths:
+    exclude:
+    - README.md
+    - azure-pipelines.yml
+    - pr/pr-build-dev.yml
+    - pr/pr-build-qa.yml
+    - pr/pr-build-uat.yml
+    - pr/pr-build-master.yml
+pr: none
+
+jobs:
+- job: Deploy
+  variables:
+  - group: sfdx-org-dev
+  steps:
+  - task: UseNode@1
+    displayName: 'Use Node.js 16.15.0'
+    inputs:
+        version: '16.15.0'
+  - bash: 
+        npm install sfdx-cli --global
+    displayName: Install Salesforce CLI underway
+  - task: DownloadSecureFile@1
+    name: jwtKey
+    displayName: 'Download Server JWT Key'
+    inputs:
+        secureFile: 'server.key'
+  - bash: 
+        sfdx force:auth:jwt:grant --clientid $(Clientid) --jwtkeyfile ./buildfiles/server.key --username $(SalesforceUserName) --instanceurl $(InstanceUrl) -a $(OrgAlias)
+    displayName: Authorize salesforce org
+  
+ 
+  - bash: 
+        sfdx force:source:deploy -l RunLocalTests -x ./manifest/package.xml -u $(OrgAlias) -w 10
+    displayName: Deploy source code to Salesforce Org

@@ -1,0 +1,59 @@
+.billingAddressStyle{
+	    background-color: #F9F9F9;
+}
+.selectAddressTitle{
+font-size: 18px;
+font-weight: 700;
+line-height: 30px;
+letter-spacing: 0.20000000298023224px;
+text-align: left;
+}
+.bestBuy_text{
+font-size: 14px;
+font-weight: 600;
+line-height: 17px;
+letter-spacing: 0.20000000298023224px;
+text-align: left;
+color:#323232;
+}
+.indirectBuy{
+
+font-size: 16px;
+font-weight: 400;
+line-height: 22px;
+letter-spacing: 0.20000000298023224px;
+text-align: right;
+color:#323232;
+}
+.gradetext_style{
+
+font-size: 14px;
+font-weight: 600;
+line-height: 20px;
+letter-spacing: 0.02em;
+text-align: left;
+
+}
+.imageDescriptionText{
+font-size: 16px;
+font-weight: 600;
+line-height: 25px;
+letter-spacing: 0.02em;
+text-align: left;
+}
+.imageQty_style
+{
+
+font-size: 14px;
+font-weight: 400;
+line-height: 18px;
+letter-spacing: 0.20000000298023224px;
+text-align: left;
+
+}
+.text_align_end{
+	text-align: end;
+}
+/* .combobox_style{
+	color: red;
+} */

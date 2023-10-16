@@ -1,0 +1,19 @@
+<template>
+    <div class="request_credential_input_row">
+        <!--not Required for Belgium-->
+          <div class="request_credential_form_input">
+            <lightning-input type="text" name="firstName" label="FirstName" variant="label-hidden" required placeholder="FirstName" onchange={handlefirstName}></lightning-input>
+          </div>
+  
+          <div class="request_credential_form_input">
+            <lightning-input type="text" name="lastname" label="LastName" variant="label-hidden" required placeholder="LastName"  onchange={handleLastName}></lightning-input>
+          </div>
+          <div class="request_credential_form_input">
+            <lightning-input type="email" name="email" label="Email" variant="label-hidden" placeholder="Email"  onchange={handleEmail}></lightning-input>
+          </div>
+
+          <div class="submit_btn_div">
+            <lightning-button onclick={saveContactDetails} label="Submit" variant="brand-outline" ></lightning-button>
+          </div>
+    </div>
+</template>
