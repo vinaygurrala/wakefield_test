@@ -33,6 +33,10 @@ jobs:
   - bash: 
         sfdx force:auth:jwt:grant --clientid $(Clientid) --jwtkeyfile ./buildfiles/server.key --username $(SalesforceUserName) --instanceurl $(InstanceUrl) -a $(OrgAlias)
     displayName: Authorize salesforce org
+
+  - bash: 
+        sfdx force:source:deploy -l RunLocalTests -c -x ./manifest/package.xml -u $(OrgAlias) -w 10
+    displayName: Run Validation on source code
   
  
   - bash: 
